@@ -72,7 +72,7 @@
                         <div class="col-md-8 offset-md-4">
                             <a href="{{ url('/auth/google') }}" class="btn btn-dark rounded-0 px-4 shadow-lg">Login With <i class="fa fa-google"></i></a>
                             <a href="{{ url('/auth/github') }}" class="btn btn-dark rounded-0 px-4 shadow-lg">Login With <i class="fa fa-github"></i></a>
-
+                            <a href="{{ url('/auth/facebook') }}" class="btn btn-dark rounded-0 px-4 shadow-lg">Login With <i class="fa fa-facebook"></i></a>
                         </div>
                     </div>
                 </div>

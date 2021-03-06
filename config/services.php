@@ -15,6 +15,12 @@ return [
         'redirect' => 'http://localhost:8000/auth/github/callback',
     ],
 
+    'facebook' => [
+        'client_id' => '289983799218052',
+        'client_secret' => '9663b4d2ec8de0bf1bbf3bcd7cc21686',
+        'redirect' => 'http://localhost:8000/auth/facebook/callback',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Third Party Services
