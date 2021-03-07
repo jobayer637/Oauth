@@ -30,7 +30,7 @@ class GithubLoginController extends Controller
             if ($finduser) {
                 Auth::login($finduser);
 
-                return redirect('/home');
+                return redirect()->route('home');
             } else {
                 $newUser = new User();
                 $newUser->name = $user->name;
@@ -42,7 +42,7 @@ class GithubLoginController extends Controller
 
                 Auth::login($newUser);
 
-                return redirect('/home');
+                return redirect()->route('home');
             }
         } catch (\Exception $e) {
             dd($e->getMessage());

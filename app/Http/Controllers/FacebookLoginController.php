@@ -32,7 +32,7 @@ class FacebookLoginController extends Controller
 
                 Auth::login($finduser);
 
-                return redirect('/home');
+                return redirect()->route('home');
             } else {
 
                 $newUser = new User();
@@ -45,7 +45,7 @@ class FacebookLoginController extends Controller
 
                 Auth::login($newUser);
 
-                return redirect('/home');
+                return redirect()->route('home');
             }
         } catch (\Exception $e) {
             dd($e->getMessage());
