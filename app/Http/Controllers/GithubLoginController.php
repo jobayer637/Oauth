@@ -8,6 +8,7 @@ use Laravel\Socialite\Facades\Socialite;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class GithubLoginController extends Controller
 {
@@ -32,11 +33,16 @@ class GithubLoginController extends Controller
 
                 return redirect()->route('home');
             } else {
+                $rand = Str::random(20);
+                $type = "@gmail.com";
+                $mail = $rand . $type;
+
                 $newUser = new User();
                 $newUser->name = $user->name;
-                $newUser->email = $user->email;
+                // $newUser->email = $user->email;
+                $newUser->email = $mail;
                 $newUser->github_id = $user->id;
-                $newUser->password = Hash::make('11111111');
+                $newUser->password = Hash::make($rand);
                 $newUser->avatar = $user->avatar;
                 $newUser->save();
 
